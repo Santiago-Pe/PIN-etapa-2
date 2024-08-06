@@ -8,6 +8,7 @@ on:
 jobs:
   terraform_apply:
     runs-on: ubuntu-latest
+    environment: PIN-2
     steps:
       - uses: actions/checkout@v1
 
