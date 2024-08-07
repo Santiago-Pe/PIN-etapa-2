@@ -5,7 +5,7 @@ resource "aws_instance" "webserver" {
   #key_name                    = app-ssh-key 
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg.id]
-  subnet_id                   = data.aws_subnet.az_a.id
+  # subnet_id                   = data.aws_subnet.az_a.id
   user_data                   = "${file("create_apache.sh")}"
 
   tags = {
