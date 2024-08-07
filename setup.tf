@@ -106,13 +106,7 @@ data "aws_region" "current" {}
 
 data "aws_caller_identity" "current" {}
 
-data "aws_subnet" "az_a" {
 
-  vpc_id            = data.aws_vpc.vpc_default.id
-
-  availability_zone = "us-east-1a"
-
-}
 
 resource "aws_security_group" "sg" {
   name        = "sg"
